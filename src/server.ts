@@ -1,7 +1,17 @@
- 
- 
-  function sumar(){
-    console.log(2 + 2)
-}
+import express, { Express } from "express"
 
-export default sumar
+const server: Express = express()
+
+// Routing
+
+server.get("/", (req, res) => {
+
+  const datos = [
+    {familiar1:"adrian enis"},
+    {familiar2:"lucia enis"}
+  ]
+
+  res.json(datos)
+})
+
+export default server
