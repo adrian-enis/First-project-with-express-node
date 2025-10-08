@@ -14,8 +14,14 @@ async function connectDB() {
     console.log(colors.red.bold("Hubo un error al conectar la base de dato"));
   }
 }
+
+
 connectDB();
 
+//Intancia de express
 export const server: Express = express();
 
-server.use("/api/products", router);
+//Leer datos de formulario
+server.use(express.json())
+
+server.use("/api/createProduct", router);
