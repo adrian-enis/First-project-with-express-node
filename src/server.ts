@@ -25,3 +25,4 @@ export const server: Express = express();
 server.use(express.json())
 
 server.use("/api/createProduct", router);
+

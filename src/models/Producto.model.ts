@@ -1,5 +1,5 @@
-import { DataTypes } from "sequelize";
-import { Table, Column, Model, DataType, Default } from "sequelize-typescript";
+import { DataTypes } from "sequelize"; //? que es
+import { Table, Column, Model, DataType, Default } from "sequelize-typescript"; // ? Investigar mas a fondo
 
 
 @Table({
@@ -19,7 +19,7 @@ class Product extends Model {
     price:number
 
 
-    @Default(true)
+    @Default(true) // explicar el default true
     @Column({
         type: DataType.BOOLEAN
     })
