@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize"; //? que es
 import { Table, Column, Model, DataType, Default } from "sequelize-typescript"; // ? Investigar mas a fondo
 
+/* =================== ******* ==================== */
 
 @Table({
     tableName: "products"

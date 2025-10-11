@@ -4,15 +4,3 @@ dist
 
 
 
- ### Resumen General del Proyecto
-
-
-  Este es un proyecto de una API REST construida con Node.js, Express y TypeScript. Utiliza Sequelize como
-  ORM para interactuar con una base de datos PostgreSQL. El objetivo principal de la API es gestionar
-  productos (crear, leer, actualizar, borrar).
-
-* `index.ts`: Es el punto de entrada de tu aplicación. Su única responsabilidad es iniciar el servidor.
-     Importa la configuración del servidor desde server.ts y lo pone a escuchar en el puerto 4000 (o el que
-     definas en tus variables de entorno).
-   * `server.ts`: Este archivo es el corazón de tu aplicación Express.
-   * `router.ts`: Aquí se definen las rutas (o endpoints) de tu API.

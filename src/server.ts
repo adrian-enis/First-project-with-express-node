@@ -1,7 +1,9 @@
 import { router } from "./router";
-import colors from "colors"
+import colors from "colors";
 import express, { Express } from "express";
 import db from "./config/db";
+
+/* =================== ******* ==================== */
 
 //connect Data base
 async function connectDB() {
@@ -15,6 +17,7 @@ async function connectDB() {
   }
 }
 
+/* =================== ******* ==================== */
 
 connectDB();
 
@@ -22,7 +25,6 @@ connectDB();
 export const server: Express = express();
 
 //Leer datos de formulario
-server.use(express.json())
+server.use(express.json());
 
-server.use("/api/createProduct", router);
-
+server.use("/api/products", router);
