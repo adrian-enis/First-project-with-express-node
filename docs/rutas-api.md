@@ -51,3 +51,7 @@ La API de productos (`/api/products`) ofrece las siguientes rutas para interactu
 
 *   **Descripción:** Elimina un producto existente.
 *   **Controlador:** (No implementado)
+
+## `SEQUELIZE NOTA/`
+
+*   **NOTA SEQUELIZE** Las instancias de Sequelize incluyen métodos y metadatos. Para acceder a los datos puros, usar .dataValues  o configurar {raw:true} en la consulta.

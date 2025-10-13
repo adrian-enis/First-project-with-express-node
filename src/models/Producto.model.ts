@@ -20,13 +20,18 @@ class Product extends Model {
     price:number
 
 
-    @Default(true) // explicar el default true
+    @Default(true) // Define por defecto que cada registro esta disponible o no disponible
     @Column({
         type: DataType.BOOLEAN
     })
     availability:boolean
-
     
+
+    @Default(false) //Por defecto, el producto no esta eliminado
+    @Column({
+        type:DataType.BOOLEAN
+    })
+    isDeleted:boolean
 }
 
 export default Product
