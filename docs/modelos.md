@@ -18,3 +18,7 @@ El proyecto utiliza Sequelize como ORM para interactuar con la base de datos Pos
     *   **Tipo:** `BOOLEAN`
     *   **Descripción:** Indica si el producto está disponible o no.
     *   **Valor por Defecto:** `true`
+   **`isDeleted`:**
+    *   **Tipo:** `BOOLEAN`
+    *   **Descripción:** Indica si el producto está eliminado o no.
+    *   **Valor por Defecto:** `false` (Se da por hecho que no esta eliminado), cuando cambia a true, se elimina

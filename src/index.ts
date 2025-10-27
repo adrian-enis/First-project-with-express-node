@@ -3,7 +3,7 @@ import  colors  from "colors";
 
 /* =================== ******* ==================== */
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5432;
 server.listen(port, () => {
     console.log(colors.cyan.bold(`REST API en el puerto ${port}`))
 })

@@ -5,14 +5,19 @@ import Product from "../models/Producto.model";
 /* =================== ******* ==================== */
 //Get all Product
 export const getProduct = async (req: Request, res: Response) => {
+
   try {
     const products = await Product.findAll({
       order: [
         ["price", "DESC"], //Orden en que se muestran "DESC O ASC"
       ],
+      where: {
+        isDeleted: false
+      },
       attributes: { exclude: ["createdAt", "updatedAt"] }, // Para excluir algunos campos
     });
     res.json({ data: products });
+    console.log("Desde getProduct")
   } catch (error) {
     console.log(error);
   }
@@ -36,7 +41,7 @@ export const getProductById = async (req: Request, res: Response) => {
 };
 
 /* =================== ******* ==================== */
-//Get Create Product
+//POST Create Product
 export const createProduct = async (req: Request, res: Response) => {
   try {
     const product = await Product.create(req.body);
@@ -97,10 +102,9 @@ export const deleteProduct = async (req:Request, res:Response) => {
         })
     }
 
-    // await product.destroy()// Eliminado de base de datos, sin embargo, podemos usar el eliminado logico
-    product.isDeleted = true
-    await product.save()
-   res.json({ data: product })
+    await product.destroy()// Eliminado de base de datos, sin embargo, podemos usar el eliminado logico
+  
+   res.json({ data: "Producto Eliminado" })
 
 }
 

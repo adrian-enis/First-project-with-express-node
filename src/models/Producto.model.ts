@@ -26,12 +26,6 @@ class Product extends Model {
     })
     availability:boolean
     
-
-    @Default(false) //Por defecto, el producto no esta eliminado
-    @Column({
-        type:DataType.BOOLEAN
-    })
-    isDeleted:boolean
 }
 
 export default Product
